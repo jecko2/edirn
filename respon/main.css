@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 70.5%;
+}
+.header{
+    border-bottom: 1px solid #E2E8F0;
+    height: 90px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3rem 3rem;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item{
+    margin-left: 5rem;
+}
+.nav-item a{
+    color: #fe7250;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-item a:hover{
+    color: #84cedb;
+    transition: all .3s ease-in-out;
+}
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+.nav-link:hover{
+    color: #482ff7;
+}
+.nav-logo{
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-left: 7rem;
+    color: #482ff7;
+    text-align: center;
+    text-decoration: none;
+}
+
+strong{
+    color: black;
+}
+.social-icons{
+    display: none;
+}
+@media only screen and (max-width: 840px){
+    .nav-menu{
+        right: -100%;
+        position: fixed;
+        top: 10rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0,.05);
+    }
+    .nav-menu.active{
+        right: 0;
+    }
+    
+    .nav-item{
+        margin: 3rem 0;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu .social-icons{
+        display: flex;
+        position: relative;
+        height: 5rem;
+    }
+    .nav-menu .social-icons i{
+        padding: 2rem;
+        font-size: 2rem;
+        position: relative;
+    }
+    .nav-menu .social-icons i#fb,
+    .nav-menu .social-icons i#ig,
+    .nav-menu .social-icons i#tw,
+    .nav-menu .social-icons i#ut{
+        cursor: pointer;
+    }
+    .nav-menu .social-icons i#fb{
+        color: blue;
+    }
+    .nav-menu .social-icons #ig{
+        color: #8a3ab9;
+    }
+    .nav-menu .social-icons i#tw{
+        color: #08a0e9;
+    }
+    .nav-menu .social-icons i#ut{
+        color: red;
+    }
+    .banner,
+    .slider,
+    #slideImg{
+        display: none;
+    }
+}
+
+
+/* Home styling */
+
+.banner{
+    width:100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+#slideImg{
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0,0.6));
+    position: absolute;
+    top: 0;
+}
+
+.home{
+    width: 60%;
+    margin: 200px auto 0;
+    text-align: center;
+    color: #fff;
+}
+.home h1{
+    font-size: 60px;
+}
+.home h3{
+    font-size: 20px;
+    width: 60%;
+    height: 25px;
+    top: 10px;
+    margin: 25px auto 70px;
+    font-weight: 100;
+}
+.home p{
+    margin: 2rem auto 40px;
+    font-size: 2rem;
+    font-family: 'Roboto' sans-serif;
+}
+button{
+    width: 160px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #fe7250;
+    background-color: #fe7250;
+    color: #fff;
+    transition: .3s;
+}
+button:hover{
+    background: transparent;
+    border:2px solid #fff;
+}
+.btn-2{
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+.btn-2:hover{
+    background-color: #fe7250;
+    border: 2px solid #fe7250;
+}
+
